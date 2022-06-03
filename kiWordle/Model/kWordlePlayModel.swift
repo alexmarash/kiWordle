@@ -10,6 +10,8 @@ import SwiftUI
 
 class kWordlePlayModel:  ObservableObject {
     @Published var guesses: [Guess] = []
+    @Published var popUpText: String?
+
     
     var testLetter = LetterClass()
     //testLetter.letter = "A"
@@ -20,6 +22,7 @@ class kWordlePlayModel:  ObservableObject {
     var currentTry: Int
     var currentEntry = [Character]()
     var currentGuess = [Character]()
+    
     
     
     
@@ -149,12 +152,33 @@ class kWordlePlayModel:  ObservableObject {
                 currentEntry = []
                 
                 return true
+            } else {
+                
+                print ("FASLE")
+                
+                showPopUp(with: "Not a Word")
+                //PopUpView(popUpText: "That is not a word you ninny!")
             }
         }
         
         return false
         
     }
+    
+    
+    func showPopUp(with text: String?) {
+        withAnimation {
+            
+            print ("showngin popup")
+            
+            popUpText = text
+        }
+        withAnimation(Animation.linear(duration: 0.2).delay(3)) {
+            popUpText = nil
+        }
+    }
+    //}
+    
     
     func deleteKey(){
         if currentEntry.count > 0 {

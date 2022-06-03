@@ -34,6 +34,7 @@
 		2B4A79D9284A8EF200FBBAEF /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 2B4A79D8284A8EF200FBBAEF /* Collections */; };
 		2B4A79DB284A8EF200FBBAEF /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 2B4A79DA284A8EF200FBBAEF /* DequeModule */; };
 		2B4A79DD284A8EF200FBBAEF /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 2B4A79DC284A8EF200FBBAEF /* OrderedCollections */; };
+		2B4A79E1284A98D700FBBAEF /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A79E0284A98D700FBBAEF /* PopUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		2B4A79D12848081300FBBAEF /* LetterClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterClass.swift; sourceTree = "<group>"; };
 		2B4A79D32848089100FBBAEF /* LetterState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterState.swift; sourceTree = "<group>"; };
 		2B4A79D5284808DD00FBBAEF /* Guess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guess.swift; sourceTree = "<group>"; };
+		2B4A79E0284A98D700FBBAEF /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 				2B4A79C92848079C00FBBAEF /* GuessView.swift */,
 				2B4A79C22847EB9D00FBBAEF /* StatsView.swift */,
 				2B4A79C42847EBAA00FBBAEF /* SettingsView.swift */,
+				2B4A79E0284A98D700FBBAEF /* PopUpView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				2B4A79C52847EBAA00FBBAEF /* SettingsView.swift in Sources */,
 				2B4A79912847AD7B00FBBAEF /* kiWordle.xcdatamodeld in Sources */,
 				2B4A79CA2848079C00FBBAEF /* GuessView.swift in Sources */,
+				2B4A79E1284A98D700FBBAEF /* PopUpView.swift in Sources */,
 				2B4A79852847AD7A00FBBAEF /* kiWordleApp.swift in Sources */,
 				2B4A79BB2847E45E00FBBAEF /* OpeningView.swift in Sources */,
 				2B4A79C32847EB9D00FBBAEF /* StatsView.swift in Sources */,

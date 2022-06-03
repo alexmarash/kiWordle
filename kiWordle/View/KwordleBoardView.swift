@@ -43,7 +43,7 @@ struct KwordleBoardView: View {
                     //}
                 
                 }.frame(width: Global.boardWidth, height: 6 * Global.boardWidth / 5)
-                
+
                 Spacer()
                 Keyboard()
                     .scaleEffect(Global.keyboardScale)
@@ -51,6 +51,12 @@ struct KwordleBoardView: View {
                 Spacer()
                 
             }.navigationBarTitleDisplayMode(.inline)
+                .overlay(alignment: .top) {
+                    if let popUpText = game.popUpText {
+                        PopUpView(popUpText: popUpText)
+                            .offset(y: 20)
+                    }
+                }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
