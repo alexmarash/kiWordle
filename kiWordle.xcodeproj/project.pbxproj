@@ -16,6 +16,24 @@
 		2B4A799B2847AD7B00FBBAEF /* kiWordleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A799A2847AD7B00FBBAEF /* kiWordleTests.swift */; };
 		2B4A79A52847AD7B00FBBAEF /* kiWordleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A79A42847AD7B00FBBAEF /* kiWordleUITests.swift */; };
 		2B4A79A72847AD7B00FBBAEF /* kiWordleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A79A62847AD7B00FBBAEF /* kiWordleUITestsLaunchTests.swift */; };
+		2B4A79B72847DDB600FBBAEF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4A79B62847DDB600FBBAEF /* Launch Screen.storyboard */; };
+		2B4A79BB2847E45E00FBBAEF /* OpeningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A79BA2847E45E00FBBAEF /* OpeningView.swift */; };
+		2B4A79BD2847E5D000FBBAEF /* kWordlePlayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A79BC2847E5D000FBBAEF /* kWordlePlayModel.swift */; };
+		2B4A79BF2847E8BA00FBBAEF /* NewGameMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A79BE2847E8BA00FBBAEF /* NewGameMenu.swift */; };
+		2B4A79C12847EB2B00FBBAEF /* NewGameSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A79C02847EB2B00FBBAEF /* NewGameSelectView.swift */; };
+		2B4A79C32847EB9D00FBBAEF /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A79C22847EB9D00FBBAEF /* StatsView.swift */; };
+		2B4A79C52847EBAA00FBBAEF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A79C42847EBAA00FBBAEF /* SettingsView.swift */; };
+		2B4A79C82848076700FBBAEF /* KwordleBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A79C72848076700FBBAEF /* KwordleBoardView.swift */; };
+		2B4A79CA2848079C00FBBAEF /* GuessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A79C92848079C00FBBAEF /* GuessView.swift */; };
+		2B4A79CC284807AD00FBBAEF /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A79CB284807AD00FBBAEF /* KeyboardButton.swift */; };
+		2B4A79CE284807E200FBBAEF /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A79CD284807E200FBBAEF /* Global.swift */; };
+		2B4A79D0284807F100FBBAEF /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A79CF284807F100FBBAEF /* Keyboard.swift */; };
+		2B4A79D22848081300FBBAEF /* LetterClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A79D12848081300FBBAEF /* LetterClass.swift */; };
+		2B4A79D42848089100FBBAEF /* LetterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A79D32848089100FBBAEF /* LetterState.swift */; };
+		2B4A79D6284808DD00FBBAEF /* Guess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A79D5284808DD00FBBAEF /* Guess.swift */; };
+		2B4A79D9284A8EF200FBBAEF /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 2B4A79D8284A8EF200FBBAEF /* Collections */; };
+		2B4A79DB284A8EF200FBBAEF /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 2B4A79DA284A8EF200FBBAEF /* DequeModule */; };
+		2B4A79DD284A8EF200FBBAEF /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 2B4A79DC284A8EF200FBBAEF /* OrderedCollections */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +66,22 @@
 		2B4A79A02847AD7B00FBBAEF /* kiWordleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kiWordleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B4A79A42847AD7B00FBBAEF /* kiWordleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kiWordleUITests.swift; sourceTree = "<group>"; };
 		2B4A79A62847AD7B00FBBAEF /* kiWordleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kiWordleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2B4A79B62847DDB600FBBAEF /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		2B4A79BA2847E45E00FBBAEF /* OpeningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningView.swift; sourceTree = "<group>"; };
+		2B4A79BC2847E5D000FBBAEF /* kWordlePlayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kWordlePlayModel.swift; sourceTree = "<group>"; };
+		2B4A79BE2847E8BA00FBBAEF /* NewGameMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameMenu.swift; sourceTree = "<group>"; };
+		2B4A79C02847EB2B00FBBAEF /* NewGameSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameSelectView.swift; sourceTree = "<group>"; };
+		2B4A79C22847EB9D00FBBAEF /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		2B4A79C42847EBAA00FBBAEF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2B4A79C62847F03000FBBAEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2B4A79C72848076700FBBAEF /* KwordleBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KwordleBoardView.swift; sourceTree = "<group>"; };
+		2B4A79C92848079C00FBBAEF /* GuessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessView.swift; sourceTree = "<group>"; };
+		2B4A79CB284807AD00FBBAEF /* KeyboardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
+		2B4A79CD284807E200FBBAEF /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		2B4A79CF284807F100FBBAEF /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		2B4A79D12848081300FBBAEF /* LetterClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterClass.swift; sourceTree = "<group>"; };
+		2B4A79D32848089100FBBAEF /* LetterState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterState.swift; sourceTree = "<group>"; };
+		2B4A79D5284808DD00FBBAEF /* Guess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guess.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +89,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B4A79D9284A8EF200FBBAEF /* Collections in Frameworks */,
+				2B4A79DB284A8EF200FBBAEF /* DequeModule in Frameworks */,
+				2B4A79DD284A8EF200FBBAEF /* OrderedCollections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,12 +135,15 @@
 		2B4A79832847AD7A00FBBAEF /* kiWordle */ = {
 			isa = PBXGroup;
 			children = (
-				2B4A79842847AD7A00FBBAEF /* kiWordleApp.swift */,
-				2B4A79862847AD7A00FBBAEF /* ContentView.swift */,
+				2B4A79C62847F03000FBBAEF /* Info.plist */,
+				2B4A79B52847DD6900FBBAEF /* Controller */,
+				2B4A79B42847DD6300FBBAEF /* View */,
+				2B4A79B32847DD5400FBBAEF /* Model */,
 				2B4A79882847AD7B00FBBAEF /* Assets.xcassets */,
 				2B4A798D2847AD7B00FBBAEF /* Persistence.swift */,
 				2B4A798F2847AD7B00FBBAEF /* kiWordle.xcdatamodeld */,
 				2B4A798A2847AD7B00FBBAEF /* Preview Content */,
+				2B4A79B62847DDB600FBBAEF /* Launch Screen.storyboard */,
 			);
 			path = kiWordle;
 			sourceTree = "<group>";
@@ -133,6 +173,43 @@
 			path = kiWordleUITests;
 			sourceTree = "<group>";
 		};
+		2B4A79B32847DD5400FBBAEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B4A79D5284808DD00FBBAEF /* Guess.swift */,
+				2B4A79BC2847E5D000FBBAEF /* kWordlePlayModel.swift */,
+				2B4A79BE2847E8BA00FBBAEF /* NewGameMenu.swift */,
+				2B4A79D12848081300FBBAEF /* LetterClass.swift */,
+				2B4A79D32848089100FBBAEF /* LetterState.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B4A79B42847DD6300FBBAEF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B4A79862847AD7A00FBBAEF /* ContentView.swift */,
+				2B4A79BA2847E45E00FBBAEF /* OpeningView.swift */,
+				2B4A79C02847EB2B00FBBAEF /* NewGameSelectView.swift */,
+				2B4A79C72848076700FBBAEF /* KwordleBoardView.swift */,
+				2B4A79CF284807F100FBBAEF /* Keyboard.swift */,
+				2B4A79CB284807AD00FBBAEF /* KeyboardButton.swift */,
+				2B4A79C92848079C00FBBAEF /* GuessView.swift */,
+				2B4A79C22847EB9D00FBBAEF /* StatsView.swift */,
+				2B4A79C42847EBAA00FBBAEF /* SettingsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B4A79B52847DD6900FBBAEF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B4A79842847AD7A00FBBAEF /* kiWordleApp.swift */,
+				2B4A79CD284807E200FBBAEF /* Global.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,6 +226,11 @@
 			dependencies = (
 			);
 			name = kiWordle;
+			packageProductDependencies = (
+				2B4A79D8284A8EF200FBBAEF /* Collections */,
+				2B4A79DA284A8EF200FBBAEF /* DequeModule */,
+				2B4A79DC284A8EF200FBBAEF /* OrderedCollections */,
+			);
 			productName = kiWordle;
 			productReference = 2B4A79812847AD7A00FBBAEF /* kiWordle.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +303,9 @@
 				Base,
 			);
 			mainGroup = 2B4A79782847AD7A00FBBAEF;
+			packageReferences = (
+				2B4A79D7284A8EF200FBBAEF /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = 2B4A79822847AD7A00FBBAEF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -237,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B4A79B72847DDB600FBBAEF /* Launch Screen.storyboard in Resources */,
 				2B4A798C2847AD7B00FBBAEF /* Preview Assets.xcassets in Resources */,
 				2B4A79892847AD7B00FBBAEF /* Assets.xcassets in Resources */,
 			);
@@ -263,10 +349,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B4A79C82848076700FBBAEF /* KwordleBoardView.swift in Sources */,
 				2B4A798E2847AD7B00FBBAEF /* Persistence.swift in Sources */,
+				2B4A79D22848081300FBBAEF /* LetterClass.swift in Sources */,
+				2B4A79CC284807AD00FBBAEF /* KeyboardButton.swift in Sources */,
+				2B4A79D42848089100FBBAEF /* LetterState.swift in Sources */,
+				2B4A79D6284808DD00FBBAEF /* Guess.swift in Sources */,
+				2B4A79C12847EB2B00FBBAEF /* NewGameSelectView.swift in Sources */,
+				2B4A79BF2847E8BA00FBBAEF /* NewGameMenu.swift in Sources */,
 				2B4A79872847AD7A00FBBAEF /* ContentView.swift in Sources */,
+				2B4A79CE284807E200FBBAEF /* Global.swift in Sources */,
+				2B4A79D0284807F100FBBAEF /* Keyboard.swift in Sources */,
+				2B4A79BD2847E5D000FBBAEF /* kWordlePlayModel.swift in Sources */,
+				2B4A79C52847EBAA00FBBAEF /* SettingsView.swift in Sources */,
 				2B4A79912847AD7B00FBBAEF /* kiWordle.xcdatamodeld in Sources */,
+				2B4A79CA2848079C00FBBAEF /* GuessView.swift in Sources */,
 				2B4A79852847AD7A00FBBAEF /* kiWordleApp.swift in Sources */,
+				2B4A79BB2847E45E00FBBAEF /* OpeningView.swift in Sources */,
+				2B4A79C32847EB9D00FBBAEF /* StatsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,9 +528,10 @@
 				DEVELOPMENT_TEAM = VA952245Q9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = kiWordle/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -457,9 +558,10 @@
 				DEVELOPMENT_TEAM = VA952245Q9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = kiWordle/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -591,6 +693,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2B4A79D7284A8EF200FBBAEF /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2B4A79D8284A8EF200FBBAEF /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B4A79D7284A8EF200FBBAEF /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		2B4A79DA284A8EF200FBBAEF /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B4A79D7284A8EF200FBBAEF /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
+		2B4A79DC284A8EF200FBBAEF /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B4A79D7284A8EF200FBBAEF /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		2B4A798F2847AD7B00FBBAEF /* kiWordle.xcdatamodeld */ = {

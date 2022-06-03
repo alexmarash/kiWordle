@@ -11,10 +11,14 @@ import SwiftUI
 struct kiWordleApp: App {
     let persistenceController = PersistenceController.shared
 
+    @StateObject var game = kWordlePlayModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            OpeningView()
+            //ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(game)
         }
     }
 }
