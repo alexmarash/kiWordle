@@ -9,7 +9,7 @@ import SwiftUI
 import Foundation
 
 struct KeyboardButton: View {
-    @EnvironmentObject var dm: kWordlePlayModel //Add game play model name here
+    @EnvironmentObject var game: kWordlePlayModel //Add game play model name here
      
     var letterClass: LetterClass
     
@@ -23,12 +23,13 @@ struct KeyboardButton: View {
     
     var body: some View {
         Button{
-            dm.addLetterToTable(letterClass.letter)  //TODO add to game plae
+            game.addLetterToTable(letterClass.letter)  //TODO add to game plae
         } label: {
             Text(letterClass.letter)
                 .font(.system(size: 20))
                 .frame(width: 35, height: 50)
-                .background(getColor(letterClass.state))
+                .background(game.keyboardsColor[letterClass.letter])
+                //.background(getColor(letterClass.state))
                 .foregroundColor(getFontColor(letterClass.state))
         }
         .buttonStyle(.plain) //TODO see what happens when this is removed

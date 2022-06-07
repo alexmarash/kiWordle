@@ -17,11 +17,18 @@ class kWordlePlayModel:  ObservableObject {
     //testLetter.letter = "A"
     //testLetter.state = .hint
     var wordLength = 5
-    var keyboardsColor = [String : LetterState]()
+    var keyboardsColor = [String: Color]()
     var theAnswer = ""
     var currentTry: Int
     var currentEntry = [Character]()
     var currentGuess = [Character]()
+    var currentColors = [Color]()
+    var answerCheck = [Character]()
+    var hintList = [Character]()
+    var hintCheck = [Character]()
+    var answerIsCorrect = false
+    var hardMode = true
+    //var keyboardColor = Keyboard()
     
     
     
@@ -38,6 +45,9 @@ class kWordlePlayModel:  ObservableObject {
         initializeKeyboard()
         initializeGuesses(wordLength: wordLength)
         theAnswer = "START"
+        createAnswerCheck()
+        answerIsCorrect = false
+        hardMode = true
 
     }
     
@@ -66,7 +76,16 @@ class kWordlePlayModel:  ObservableObject {
             guesses.append(Guess(index: index))
         }
         
+}
+    
+    func createAnswerCheck(){
+        answerCheck = [Character]()
+        for i in 0..<wordLength{
+            let thisIndex = theAnswer.index(theAnswer.startIndex, offsetBy: i)
+            answerCheck.append(theAnswer[thisIndex])
+        }
     }
+    
     
     func addLetterToTable(_ letter: String){
         //currentEntry.append([Character](letter))
@@ -136,34 +155,121 @@ class kWordlePlayModel:  ObservableObject {
     }
     
     
+    func updateKeyboard(){
+        for k in 0..<wordLength{
+            if keyboardsColor[String(currentGuess[k])] != Color.correct{
+                keyboardsColor[String(currentGuess[k])] = currentColors[k]
+            }
+        }
+    }
     
-    func enterKey() -> Bool{
-        if currentEntry.count == wordLength{
+    
+    func enterKey(){
+        
+        if currentEntry.count != wordLength{
+            showPopUp(with: "Not enough letters")
+            return
+        }
+        
+        if !isThisAWord(currentEntry) {
+            showPopUp(with: "That is not a word!")
+            return
+        }
+        
+        if hardMode && !checkHints(){
+            showPopUp(with: "You did not use all the hints")
+            return
+        }
+        
+        answerIsCorrect = checkWord()
+        currentTry += 1
+        currentEntry = [Character]()
+       
+    }
+        
+    
+    
+    func checkHints() -> Bool{
+        var usedAllHints = true
+        var currentEntryCopy = [Character]()
+        
+        for k in 0..<wordLength{
+            currentEntryCopy.append(currentEntry[k])
+        }
+        
+        for i in 0..<hintList.count{
+            var usedThisHint = false
+            for j in 0..<wordLength{
+                if hintList[i] == currentEntryCopy[j] {
+                    usedThisHint = true
+                    currentEntryCopy[j] = "<"
+                }
+            }
+            if !usedThisHint {
+                usedAllHints = false
+            }
+        }
+        return usedAllHints
+    }
+    
+    
+    
+    func checkWord() -> Bool{
+        currentColors = [Color](repeating: Color.wrong, count: wordLength)
+        hintList = [Character]()
+        
+        //var hintCheck = [Character]()
+        
+        //var hintCheck = answerCheck.map{$0.copy()}
+        
+        var thisAnswerCheck = [Character]()
+        
+        for k in 0..<wordLength{
+            thisAnswerCheck.append(answerCheck[k])
+        }
+        
+    
+        var correct = true
+        
+        
+        for i in 0..<wordLength{
+            //hintCheck.append(answerCheck[i])
             
-            print (currentEntry)
-            print (isThisAWord(currentEntry))
-            print (String(currentEntry))
+            guesses[currentTry].letterColor[i] = Color.wrong
             
-            if isThisAWord(currentEntry) {
-
-                currentGuess = currentEntry
-                currentTry += 1
-                
-                currentEntry = []
-                
-                return true
+            if currentEntry[i] == thisAnswerCheck[i] {
+                currentColors[i] = Color.correct
+                guesses[currentTry].letterColor[i] = Color.correct
+                hintList.append(currentEntry[i])
+                thisAnswerCheck[i] = "<"
+                //hintCheck[i] = "<"
+                //currentColors.append(Color(UIColor(named: "Correct")!))
             } else {
-                
-                print ("FASLE")
-                
-                showPopUp(with: "Not a Word")
-                //PopUpView(popUpText: "That is not a word you ninny!")
+                correct = false
             }
         }
         
-        return false
+        if correct {
+            return correct
+        } else {
+            for i in 0..<wordLength{
+                for j in 0..<wordLength{
+                    if currentEntry[i] == thisAnswerCheck[j]{
+                        hintList.append(currentEntry[i])
+                        currentColors[i] = Color.hint
+                        guesses[currentTry].letterColor[i] = Color.hint
+                        thisAnswerCheck[j] = ">"
+                    }
+                }
+            }
+        }
+        
+        updateGuess()
+        
+        return correct
         
     }
+    
     
     
     func showPopUp(with text: String?) {

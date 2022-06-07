@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B46A7A7284E63F50051B9FF /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B46A7A6284E63F50051B9FF /* Color+Extension.swift */; };
 		2B4A79852847AD7A00FBBAEF /* kiWordleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A79842847AD7A00FBBAEF /* kiWordleApp.swift */; };
 		2B4A79872847AD7A00FBBAEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A79862847AD7A00FBBAEF /* ContentView.swift */; };
 		2B4A79892847AD7B00FBBAEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B4A79882847AD7B00FBBAEF /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B46A7A6284E63F50051B9FF /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		2B4A79812847AD7A00FBBAEF /* kiWordle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kiWordle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B4A79842847AD7A00FBBAEF /* kiWordleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kiWordleApp.swift; sourceTree = "<group>"; };
 		2B4A79862847AD7A00FBBAEF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				2B4A798F2847AD7B00FBBAEF /* kiWordle.xcdatamodeld */,
 				2B4A798A2847AD7B00FBBAEF /* Preview Content */,
 				2B4A79B62847DDB600FBBAEF /* Launch Screen.storyboard */,
+				2B46A7A6284E63F50051B9FF /* Color+Extension.swift */,
 			);
 			path = kiWordle;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				2B4A79872847AD7A00FBBAEF /* ContentView.swift in Sources */,
 				2B4A79CE284807E200FBBAEF /* Global.swift in Sources */,
 				2B4A79D0284807F100FBBAEF /* Keyboard.swift in Sources */,
+				2B46A7A7284E63F50051B9FF /* Color+Extension.swift in Sources */,
 				2B4A79BD2847E5D000FBBAEF /* kWordlePlayModel.swift in Sources */,
 				2B4A79C52847EBAA00FBBAEF /* SettingsView.swift in Sources */,
 				2B4A79912847AD7B00FBBAEF /* kiWordle.xcdatamodeld in Sources */,

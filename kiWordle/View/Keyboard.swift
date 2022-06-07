@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Keyboard: View {
-    @EnvironmentObject var dm: kWordlePlayModel
+    @EnvironmentObject var game: kWordlePlayModel
     
     var rowOneArray = "QWERTYUIOP".map{ String($0) }
     var rowTwoArray = "ASDFGHJKL".map{ String($0) }
@@ -25,7 +25,7 @@ struct Keyboard: View {
             }
             HStack(spacing: 2){
                 Button {
-                    dm.enterKey()
+                    game.enterKey()
                 } label: {
                     Text("Enter")
                 }
@@ -36,7 +36,7 @@ struct Keyboard: View {
                 
                 ForEach(rowThreeArray, id: \.self) { letter in KeyboardButton(letterClass: LetterClass(letter: letter, state: .unused)) }
                 Button {
-                    dm.deleteKey()
+                    game.deleteKey()
                 } label: {
                     //Text("Delete")
                     Image(systemName: "delete.backward.fill")
@@ -45,8 +45,8 @@ struct Keyboard: View {
                     .foregroundColor(.primary)
                     .background(getColor(.unused))
                 }
-                .disabled(dm.currentEntry.count == 0)  //TODO this is just an example, need to add to other lines as well
-                .opacity((dm.currentEntry.count == 0) ? 0.6 : 1) //TODO this is just an example, need to add to other lines as well
+                .disabled(game.currentEntry.count == 0)  //TODO this is just an example, need to add to other lines as well
+                .opacity((game.currentEntry.count == 0) ? 0.6 : 1) //TODO this is just an example, need to add to other lines as well
                 
             }
         }
