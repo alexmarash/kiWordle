@@ -9,6 +9,9 @@ import SwiftUI
 
 struct GuessView: View {
     @Binding var guess: Guess
+    
+    
+    
     //var wordLength: Int
     
     var body: some View {
@@ -17,13 +20,22 @@ struct GuessView: View {
                 Text(guess.guessLetters[index])
                     .foregroundColor(.primary)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0,  maxHeight: .infinity, alignment: .center)
-                    //.background(.systemGray)
+                    .background(guess.letterColor[index])
                     .font(.system(size: 35, weight: .heavy))
                     .border(Color(.secondaryLabel))
             }
         }
     }
+    
+    //func printGuess(){
+    //    print ("Guessview", guess)
+    //}
+    
+
+
 }
+
+
 
 struct GuessView_Previews: PreviewProvider {
 

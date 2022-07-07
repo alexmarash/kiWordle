@@ -152,6 +152,9 @@ class kWordlePlayModel:  ObservableObject {
         
         
         guesses[currentTry].word = thisWord
+        
+        print ("update guess", guesses[currentTry])
+        
     }
     
     
@@ -165,11 +168,12 @@ class kWordlePlayModel:  ObservableObject {
     
     
     func enterKey(){
-        
         if currentEntry.count != wordLength{
             showPopUp(with: "Not enough letters")
             return
         }
+        
+        print ("this is the current Entry", currentEntry)
         
         if !isThisAWord(currentEntry) {
             showPopUp(with: "That is not a word!")
@@ -184,6 +188,10 @@ class kWordlePlayModel:  ObservableObject {
         answerIsCorrect = checkWord()
         currentTry += 1
         currentEntry = [Character]()
+        
+        if answerIsCorrect {
+            showPopUp(with: "You Won!! \n You are the Champion!")
+        }
        
     }
         
@@ -193,10 +201,14 @@ class kWordlePlayModel:  ObservableObject {
         var usedAllHints = true
         var currentEntryCopy = [Character]()
         
+    
+
+        
         for k in 0..<wordLength{
             currentEntryCopy.append(currentEntry[k])
         }
         
+
         for i in 0..<hintList.count{
             var usedThisHint = false
             for j in 0..<wordLength{
@@ -218,14 +230,12 @@ class kWordlePlayModel:  ObservableObject {
         currentColors = [Color](repeating: Color.wrong, count: wordLength)
         hintList = [Character]()
         
-        //var hintCheck = [Character]()
-        
-        //var hintCheck = answerCheck.map{$0.copy()}
-        
         var thisAnswerCheck = [Character]()
+        var thisEntryCheck = [Character]()
         
         for k in 0..<wordLength{
             thisAnswerCheck.append(answerCheck[k])
+            thisEntryCheck.append(currentEntry[k])
         }
         
     
@@ -233,17 +243,14 @@ class kWordlePlayModel:  ObservableObject {
         
         
         for i in 0..<wordLength{
-            //hintCheck.append(answerCheck[i])
-            
             guesses[currentTry].letterColor[i] = Color.wrong
             
-            if currentEntry[i] == thisAnswerCheck[i] {
+            if thisEntryCheck[i] == thisAnswerCheck[i] {
                 currentColors[i] = Color.correct
                 guesses[currentTry].letterColor[i] = Color.correct
                 hintList.append(currentEntry[i])
                 thisAnswerCheck[i] = "<"
-                //hintCheck[i] = "<"
-                //currentColors.append(Color(UIColor(named: "Correct")!))
+                thisEntryCheck[i] = ">"
             } else {
                 correct = false
             }
@@ -254,11 +261,12 @@ class kWordlePlayModel:  ObservableObject {
         } else {
             for i in 0..<wordLength{
                 for j in 0..<wordLength{
-                    if currentEntry[i] == thisAnswerCheck[j]{
+                    if thisEntryCheck[i] == thisAnswerCheck[j]{
                         hintList.append(currentEntry[i])
                         currentColors[i] = Color.hint
                         guesses[currentTry].letterColor[i] = Color.hint
-                        thisAnswerCheck[j] = ">"
+                        thisAnswerCheck[j] = "<"
+                        thisEntryCheck[i] = ">"
                     }
                 }
             }
@@ -289,9 +297,7 @@ class kWordlePlayModel:  ObservableObject {
     func deleteKey(){
         if currentEntry.count > 0 {
             currentEntry.removeLast()
-            
-            print ("remvoing lsat")
-            
+
             //guesses[currentTry].word[currentEntry.count] = " "
             updateGuess()
             
@@ -307,7 +313,18 @@ class kWordlePlayModel:  ObservableObject {
     
     
     func isThisAWord(_ currentWord:  [Character]) -> Bool{
-        UIReferenceLibraryViewController.dictionaryHasDefinition(forTerm: String(currentWord))
+        
+        let thisWord = String(currentWord)
+
+        
+        //TODO:  need to fix dictionary check
+        
+        if (UIReferenceLibraryViewController.dictionaryHasDefinition(forTerm: thisWord) == nil){
+            showPopUp(with: "Please load a dictionary")
+            return false}
+        
+        
+        return UIReferenceLibraryViewController.dictionaryHasDefinition(forTerm: String(thisWord))
         //UIReferenceLibraryViewController.dictionaryHasDefinition(forTerm: String(currentWord))
         
 
